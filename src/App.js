@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import AddCard from "./components/AddCard";
 import AllCards from './components/AllCards';
 import Header from "./components/Header";
+import './index.css';
 
 function App() {
   const [cards, setCards] = useState([])
@@ -33,16 +34,13 @@ function App() {
 
     const data = await res.json()
 
-    setCards([...cards, data.data])
+    setCards([...cards, { ...card, balance: 0 }])
   }
 
   return (
     <div className="container">
-      <Header />
-      <p></p>
-      <p></p>
-      <AddCard  onAdd={addCard} />
-      { cards.length > 0 ? (<AllCards cards={cards} />) : ('No Cards') }
+      <AddCard onAdd={addCard} />
+      { cards.length > 0 ? (<AllCards cards={cards} />) : (<p className='mt-5 lead'>No Cards</p>) }
     </div>
   );
 }

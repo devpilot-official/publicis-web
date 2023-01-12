@@ -1,10 +1,14 @@
 const Card = ({ card }) => {
     return (
-      <tr className="table-light">
-        <td className="table-light">{card.name}{' '}</td>
-        <td className="table-light">{card.cardNumber}{' '}</td>
-        <td className="table-light">£{card.balance}{' '}</td>
-        <td className="table-light">£{card.limit}{' '}</td>
+      <tr>
+        <td>{card.name}{' '}</td>
+        <td>{card.cardNumber}{' '}</td>
+        {
+          card.balance > 0
+          ? (<td>£{card.balance}{' '}</td>)
+          : (<td className="text-danger">£{card.balance}{' '}</td>)
+        }
+        <td>£{card.limit}{' '}</td>
       </tr>
     )
   }
