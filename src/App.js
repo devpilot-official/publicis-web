@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import AddCard from "./components/AddCard";
 import AllCards from './components/AllCards';
-import Header from "./components/Header";
 import './index.css';
 
 function App() {
