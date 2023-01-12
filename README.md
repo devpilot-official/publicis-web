@@ -4,7 +4,7 @@
 # Requirements/Technologies
 -	NodeJS 10+
 -	React
-
+-	Bootstrap
 # Installation
 -  Run `git@github.com:devpilot-official/publicis-web.git`
 -  Run `yarn install`

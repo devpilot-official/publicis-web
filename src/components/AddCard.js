@@ -31,40 +31,43 @@ const AddCard = ({ onAdd }) => {
   }
 
   return (
-    <form className='row align-items-start' onSubmit={onSubmit}>
-      <div className='form-control'>
-        <label className='form-label'>Name</label>
-        <input
-          type='text'
-          placeholder='e.g. Muhammed Salaudeen'
-          value={name}
-          className='form-control'
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
-      <div className='form-control'>
-        <label className='form-label'>Card Number</label>
-        <input
-          type='number'
-          placeholder='e.g. 00001111222233334444'
-          value={cardNumber}
-          className='form-control'
-          onChange={(e) => setCardNumber(e.target.value)}
-        />
-      </div>
-      <div className='form-control form-control-check'>
-        <label className='form-label'>Limit</label>
-        <input
-          type='text'
-          placeholder='e.g. 5000'
-          value={limit}
-          className='form-control'
-          onChange={(e) => setLimit(e.target.value)}
-        />
-      </div>
-
-      <input type='submit' value='Add' className='btn btn-secondary' />
-    </form>
+    <div className='col-6'>
+      <p className='lead'>Add Card</p>
+      <form className='form-control' onSubmit={onSubmit}>
+        <div className='mt-3'>
+          <label className='form-label'>Name</label>
+          <input
+            type='text'
+            placeholder='e.g. Muhammed Salaudeen'
+            value={name}
+            className='form-control'
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className='mt-3'>
+          <label className='form-label'>Card Number</label>
+          <input
+            type='number'
+            placeholder='e.g. 00001111222233334444'
+            value={cardNumber}
+            className='form-control'
+            onChange={(e) => setCardNumber(e.target.value)}
+          />
+        </div>
+        <div className='mt-3'>
+          <label className='form-label'>Limit</label>
+          <input
+            type='text'
+            placeholder='e.g. 5000'
+            value={limit}
+            className='form-control'
+            onChange={(e) => setLimit(e.target.value)}
+          />
+        </div>
+        
+        <input type='submit' value='Add' className='mt-3 btn btn-secondary' />
+      </form>
+    </div>
   )
 }
 
